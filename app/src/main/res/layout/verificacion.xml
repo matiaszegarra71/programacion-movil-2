@@ -2,14 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/inicio_salar">
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:background="@drawable/inicio_salar"
+    tools:context=".VerificacionActivity">
 
     <ImageView
-        android:id="@+id/imgLogo"
+        android:id="@+id/imgPostal"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/postal_salar"
@@ -17,69 +18,61 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="32dp" />
 
     <TextView
-        android:id="@+id/tvTitulo"
+        android:id="@+id/tvTituloVerificacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inicio de Sesión"
-        android:textColor="#000000"
-        android:textSize="28sp"
+        android:text="Verificación de Usuario"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/imgPostal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
+    <TextView
+        android:id="@+id/tvSubtituloVerificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Ven y únete a nuestra comunidad!"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloVerificacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
     <EditText
-        android:id="@+id/etUsuario"
+        android:id="@+id/etCorreoVerificacion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/edittext_bg"
-        android:hint="Nombre de Usuario"
-        android:inputType="textPersonName"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+        app:layout_constraintTop_toBottomOf="@id/tvSubtituloVerificacion" />
 
-    <EditText
-        android:id="@+id/etContrasena"
+    <Button
+        android:id="@+id/btnEnviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/edittext_bg"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/btn_bg"
         android:padding="12dp"
+        android:text="ENVIAR"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etUsuario" />
-
-    <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/btn_bg"
-        android:padding="12dp"
-        android:text="INGRESAR"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etContrasena" />
+        app:layout_constraintTop_toBottomOf="@id/etCorreoVerificacion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
